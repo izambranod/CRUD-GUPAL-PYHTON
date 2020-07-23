@@ -9,7 +9,7 @@ ejecutar el scripts de Mysql plan_cuenta.sql
 Clonar el repositorio en Visual Studio Code abriendo Paleta de comando y escribir:
 ```bash
 git: Clone
-https://github.com/izambranod/PRUEBA/edit/master/README.md
+https://github.com/izambranod/CRUD-GUPAL-PYHTON.git
 ```
 ## Integrantes
 * Jose Arreaga
