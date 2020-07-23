@@ -18,7 +18,7 @@ def ejecutar_menu():
             print(Fore.GREEN + '\n<<<Ha Ingresado al menu Plan de cuenta>>> ')
             from int_cuenta import ejecutar_cuenta
             ejecutar_cuenta()
-            input('Presione una tecla para continuar')
+            input('Presione una tecla para continuar ')
         elif opc == '2':
             answer=input(f"¿Estas seguro que desea salir del sistema? [y/n]: ")
             if not answer or answer[0].lower() != 'y':
