@@ -124,7 +124,7 @@ def ejecutar_grupo():
             
             while True:
                 try:
-                    valor = int(input(' Ingrese cantidad de datos a Ingresar '))
+                    valor = int(input('Ingrese cantidad de datos a Ingresar: '))
                 except ValueError:
                     print(Fore.RED + "Debes ingresar cantidad de datos a Ingresar")
                     continue
