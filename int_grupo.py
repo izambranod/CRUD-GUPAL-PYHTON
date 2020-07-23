@@ -96,24 +96,30 @@ def eliminar():
 def consultar():
     buscar = input('Ingrese nombre a buscar: ')
     cli = ctr.consulta(buscar)
+    print(Fore.WHITE + '-----------------------')
     print(Fore.BLUE + '   Codigo  Descripcion')
+    print(Fore.WHITE + '-----------------------')
     for registro in cli:
         print("{:7}     {:7}".format(registro[0],registro[1]))
 
 def busq():
     buscar = ''
     cli = ctr.consulta(buscar)
+    print(Fore.WHITE + '-----------------------')
     print(Fore.BLUE + '   Codigo  Descripcion')
+    print(Fore.WHITE + '-----------------------')
     for registro in cli:
         print("{:7}     {:7}".format(registro[0],registro[1]))
 
 def ejecutar_grupo():
     opc = ''
     while True:
+        os.system('cls||clear')
         opc =  str(menu(
             ['Ingresar', 'Mostrar' ,'Modificar', 'Eliminar', 'Retornar Menu Principal'],
             Fore.GREEN + 'MENU GRUPO DE CUENTA'))
         if opc == '0':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Insertar datos>>> ')
             
             while True:
@@ -130,16 +136,19 @@ def ejecutar_grupo():
             insertar(valor)
             input('Presione una tecla para continuar')
         elif opc == '1':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Mostrar datos>>> ')
             consultar()
             input('Presione una tecla para continuar')
         elif opc == '2':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Modificar datos>>> ')
             print(Fore.BLUE + '<<< Lista de Grupos >>> ')
             busq()
             modificar()
             input('Presione una tecla para continuar')
         elif opc == '3':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Eliminar datos>>> ')
             print(Fore.BLUE + '<<< Lista de Grupos >>> ')
             busq()
@@ -150,6 +159,7 @@ def ejecutar_grupo():
             if not answer or answer[0].lower() != 'y':
                 input('Presione una tecla para continuar')
             else:
+                os.system('cls||clear')
                 print(Fore.GREEN + '\n<<<Ha regresado al menu principal>>> ')
                 from int_menuprincipal import ejecutar_menu
                 ejecutar_menu()

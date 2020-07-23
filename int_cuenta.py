@@ -209,26 +209,32 @@ def eliminar():
 def consultar():
     buscar = input('Ingrese la descripcion a buscar: ')
     cli = ctr.consulta(buscar)
-    print(Fore.BLUE + "              <<< Listado Plan de Cuenta >>>>          ")
-    print(Fore.BLUE + '  Id    Codigo     grupo     Descripcion     Naturaleza     Estado ')
+    print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
+    print(Fore.BLUE + '  Id    Codigo     grupo        Descripcion       Naturaleza       Estado ')
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
     for registro in cli:
-        print('{:3}      {:3}         {:}         {:}              {:}           {:}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
+        print('{0:3}      {1:7} {2:4}\t\t {3:11}        {4:15}{5:45}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
 
 def busq():
     buscar = ''
     cli = ctr.consulta(buscar)
-    print(Fore.BLUE + "              <<< Listado Plan de Cuenta >>>>          ")
-    print(Fore.BLUE + '  Id    Codigo     grupo     Descripcion     Naturaleza     Estado ')
+    print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
+    print(Fore.BLUE + '  Id    Codigo     grupo        Descripcion       Naturaleza       Estado ')
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
     for registro in cli:
-        print('{:3}      {:3}       {:3}        {:3}              {:3}          {:}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
+        print('{0:3}      {1:7} {2:4}\t\t {3:11}        {4:15}{5:45}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
 
 def ejecutar_cuenta():
     opc = ''
     while True:
+        os.system('cls||clear')
         opc =  str(menu(
             ['Ingresar', 'Mostrar' ,'Modificar', 'Eliminar', 'Retornar Menu Principal'],
             Fore.GREEN + 'MENU PLAN DE CUENTA'))
         if opc == '0':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Insertar datos>>> ')
             
             while True:
@@ -245,15 +251,18 @@ def ejecutar_cuenta():
             insertar(valor)
             input('Presione una tecla para continuar')
         elif opc == '1':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Mostrar datos>>> ')
             consultar()
             input('Presione una tecla para continuar')
         elif opc == '2':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Modificar datos>>> ')
             busq()
             modificar()
             input('Presione una tecla para continuar')
         elif opc == '3':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Eliminar datos>>> ')
             busq()
             eliminar()
@@ -263,6 +272,7 @@ def ejecutar_cuenta():
             if not answer or answer[0].lower() != 'y':
                 input('Presione una tecla para continuar')
             else:
+                os.system('cls||clear')
                 print(Fore.GREEN + '\n<<<Ha regresado al menu principal>>> ')
                 from int_menuprincipal import ejecutar_menu
                 ejecutar_menu()
