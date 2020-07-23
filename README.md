@@ -13,6 +13,12 @@ https://github.com/izambranod/CRUD-GUPAL-PYHTON.git
 ```
 ## Crear base de dato
 ```bash
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 -- Volcando estructura de base de datos para plan_cuenta
 CREATE DATABASE IF NOT EXISTS `plan_cuenta` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
 USE `plan_cuenta`;
