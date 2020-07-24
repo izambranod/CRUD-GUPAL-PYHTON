@@ -101,6 +101,7 @@ def consultar():
     print(Fore.WHITE + '-----------------------')
     for registro in cli:
         print("{:7}     {:7}".format(registro[0],registro[1]))
+    print(Fore.WHITE + '-----------------------')
 
 def busq():
     buscar = ''
@@ -110,7 +111,8 @@ def busq():
     print(Fore.WHITE + '-----------------------')
     for registro in cli:
         print("{:7}     {:7}".format(registro[0],registro[1]))
-
+    print(Fore.WHITE + '-----------------------')
+    
 def ejecutar_grupo():
     opc = ''
     while True:

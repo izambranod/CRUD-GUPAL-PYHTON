@@ -99,6 +99,7 @@ def modificar():
             continue
         if not(ctr.verifi(cuenta)):
             print(Fore.RED +'Error: No existe el id Ingresado, por favor escriba un id valido')
+            continue
         else:       
             break
     while True:
@@ -114,6 +115,7 @@ def modificar():
             continue
         if (ctr.veriCod(codigo)):
             print(Fore.RED +'Error: ya existe el codigo Ingresado, por favor escriba un codigo nuevo')
+            continue
         else:
             break
     while True:
@@ -209,22 +211,23 @@ def eliminar():
 def consultar():
     buscar = input('Ingrese la descripcion a buscar: ')
     cli = ctr.consulta(buscar)
-    print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
     print(Fore.WHITE + '--------------------------------------------------------------------------')
     print(Fore.BLUE + '  Id    Codigo     grupo        Descripcion       Naturaleza       Estado ')
     print(Fore.WHITE + '--------------------------------------------------------------------------')
     for registro in cli:
         print('{0:3}      {1:7} {2:4}\t\t {3:11}        {4:15}{5:45}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
 
 def busq():
     buscar = ''
     cli = ctr.consulta(buscar)
-    print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
+    
     print(Fore.WHITE + '--------------------------------------------------------------------------')
     print(Fore.BLUE + '  Id    Codigo     grupo        Descripcion       Naturaleza       Estado ')
     print(Fore.WHITE + '--------------------------------------------------------------------------')
     for registro in cli:
         print('{0:3}      {1:7} {2:4}\t\t {3:11}        {4:15}{5:45}'.format(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
+    print(Fore.WHITE + '--------------------------------------------------------------------------')
 
 def ejecutar_cuenta():
     opc = ''
@@ -253,17 +256,21 @@ def ejecutar_cuenta():
         elif opc == '1':
             os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Mostrar datos>>> ')
+
             consultar()
             input('Presione una tecla para continuar')
+
         elif opc == '2':
             os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Modificar datos>>> ')
+            print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
             busq()
             modificar()
             input('Presione una tecla para continuar')
         elif opc == '3':
             os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Eliminar datos>>> ')
+            print(Fore.BLUE + "                 <<< Listado Plan de Cuenta >>>>          ")
             busq()
             eliminar()
             input('Presione una tecla para continuar')

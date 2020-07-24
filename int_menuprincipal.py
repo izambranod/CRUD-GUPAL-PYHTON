@@ -6,15 +6,19 @@ def ejecutar_menu():
     Integrantes()
     opc = ' '
     while True:
+        os.system('cls||clear')
+        Integrantes()
         opc =  str(menu(
             ['Grupo','Plan de cuenta','Salir'],
             Fore.GREEN + '      MENU PRINCIPAL   '))
         if opc == '0':
-            print(Fore.GREEN +'\n<<<Ha Ingresado al menu grupo de cuenta>>> ')
+            os.system('cls||clear')
             from int_grupo import ejecutar_grupo
             ejecutar_grupo()
+            print(Fore.GREEN +'\n<<<Ha Ingresado al menu grupo de cuenta>>> ')
             input('Presione una tecla para continuar')
         elif opc == '1':
+            os.system('cls||clear')
             print(Fore.GREEN + '\n<<<Ha Ingresado al menu Plan de cuenta>>> ')
             from int_cuenta import ejecutar_cuenta
             ejecutar_cuenta()
